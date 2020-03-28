@@ -12,6 +12,7 @@ const port = config.PORT;
 const DB = config.DB;
 
 const auth_router = require("./routers/auth_router");
+const user_router = require("./routers/user_router");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -30,7 +31,7 @@ app.use(helmet());
 app.use(compression());
 
 app.use("/api/auth", auth_router);
-
+app.use("/api/user", user_router);
 
 app.get("/", (req, res) => {
     res.send(`Health check ran successfully!`);
