@@ -1,0 +1,23 @@
+version: '3'
+services:
+  qma-microservice:
+    build: 
+      context: ./qma-microservice
+      dockerfile: Dockerfile
+    volumes: 
+      - /app/node_modules
+      - ./:/app
+    restart: always
+    command: npm start
+    ports:
+      - "8000:8000"
+    links:
+      - mongo
+  mongo:
+    image: mvertes/alpine-mongo
+    expose:
+      - 27017
+    volumes: 
+      - ./data:/data/db
+
+    
