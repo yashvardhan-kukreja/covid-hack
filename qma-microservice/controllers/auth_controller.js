@@ -60,7 +60,7 @@ module.exports.login_user = (contact, pin) => {
                             message: "User logged in successfully!",
                             code: 200
                         },
-                        body: {
+                        payload: {
                             user: current_user,
                             token: token
                         }
