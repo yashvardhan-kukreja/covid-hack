@@ -6,8 +6,10 @@ services:
       dockerfile: Dockerfile
     volumes: 
       - /app/node_modules
-      - ./:/app
+      - ./qma-microservice:/app
     restart: always
+    environment: 
+      - DB=mongodb://mongo:27017/covidhack
     command: npm start
     ports:
       - "8000:8000"
