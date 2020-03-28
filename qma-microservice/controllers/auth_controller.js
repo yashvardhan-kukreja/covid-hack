@@ -1,4 +1,4 @@
-const UserTransasctions = require("../models/user_db_transactions");
+const UserTransasctions = require("../models/user/user_db_transactions");
 const Promise = require("bluebird");
 
 module.exports.register_user = (name, contact, aadhar, addr_lat, addr_long, addr_text, addr_pincode, pin) => {

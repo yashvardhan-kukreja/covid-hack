@@ -3,7 +3,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const Promise = require("bluebird");
 
-const config = require("../utils/config");
+const config = require("../../utils/config");
 
 module.exports.fetch_user_by_id = (id) => {
     return User.findOne({_id: id});
