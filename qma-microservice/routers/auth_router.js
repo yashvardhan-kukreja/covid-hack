@@ -18,6 +18,27 @@ router.post("/register", (req, res) => {
         .catch(err => res.status(err.meta.code).json(err));
 });
 
+/////////////////////////////////////// SAMPLE ERROR RESPONSE /////////////////////////////////////////////////////////////
+
+// {
+//     "meta": {
+//         "success": false,
+//         "message": "User already exists with the same contact no. or aadhar card no.",
+//         "code": 400
+//     }
+// }
+
+
+// {
+//     "meta": {
+//         "success": true,
+//         "message": "Registered Yashvardhan Kukreja successfully!",
+//         "code": 200
+//     }
+// }
+
+/////////////////////////////////////// SAMPLE SUCCESSFUL RESPONSE /////////////////////////////////////////////////////////////
+
 router.post("/login", (req, res) => {
     let {
         contact,
