@@ -5,8 +5,8 @@ services:
       context: ./qma-microservice
       dockerfile: Dockerfile
     volumes: 
-      - /app/node_modules
-      - ./qma-microservice:/app
+      - /usr/src/app/node_modules
+      - ./qma-microservice:/usr/src/app
     restart: always
     environment: 
       - DB=mongodb://mongo:27017/covidhack
