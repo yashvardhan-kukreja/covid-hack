@@ -22,6 +22,36 @@ router.get("/profile", (req, res) => {
     });
 });
 
+/////////////////////////////////////// SAMPLE SUCCESSFUL RESPONSE /////////////////////////////////////////////////////////////
+
+// {
+//     "meta": {
+//         "success": true,
+//         "message": "Fetched the profile successfully!",
+//         "code": 200
+//     },
+//     "payload": {
+//         "address": {
+//             "geolocation": {
+//                 "type": "Point",
+//                 "coordinates": [
+//                     77.298594,
+//                     28.400145
+//                 ]
+//             },
+//             "text": "5L/153 NIT Faridabad",
+//             "pincode": "121001"
+//         },
+//         "_id": "5e7f4835745e1b00110dcda0",
+//         "name": "Yashvardhan Kukreja",
+//         "contact": "9876543210",
+//         "aadhar": "1234567890",
+//         "password_pin": "$2a$10$23Z5KZtZ4b/XAmGbZFNVJ..s9hdfbxyVgIAWNBNFjBYmJTHwM2TEe",
+//         "__v": 0,
+//         "iat": 1585405364
+//     }
+// }
+
 router.post("/type-a", (req, res) => {
     let user_id = req.decoded._id;
     let {
@@ -34,6 +64,16 @@ router.post("/type-a", (req, res) => {
         .then(data => res.status(data.meta.code).json(data))
         .catch(err => res.status(err.meta.code).json(err));
 });
+
+/////////////////////////////////////// SAMPLE SUCCESSFUL RESPONSE /////////////////////////////////////////////////////////////
+
+// {
+//     "meta": {
+//         "success": true,
+//         "message": "Added the Type A data successfully!",
+//         "code": 200
+//     }
+// }
 
 router.post("/type-b", (req, res) => {
     let user_id = req.decoded._id;
@@ -48,6 +88,16 @@ router.post("/type-b", (req, res) => {
         .catch(err => res.status(err.meta.code).json(err));
 });
 
+/////////////////////////////////////// SAMPLE SUCCESSFUL RESPONSE /////////////////////////////////////////////////////////////
+
+// {
+//     "meta": {
+//         "success": true,
+//         "message": "Added the Type A data successfully!",
+//         "code": 200
+//     }
+// }
+
 router.post("/type-c", (req, res) => {
     let user_id = req.decoded._id;
     let {
@@ -60,6 +110,16 @@ router.post("/type-c", (req, res) => {
         .catch(err => res.status(err.meta.code).json(err));
 });
 
+/////////////////////////////////////// SAMPLE SUCCESSFUL RESPONSE /////////////////////////////////////////////////////////////
+
+// {
+//     "meta": {
+//         "success": true,
+//         "message": "Added the Type A data successfully!",
+//         "code": 200
+//     }
+// }
+
 router.post("/type-d", (req, res) => {
     let user_id = req.decoded._id;
     let {
@@ -71,5 +131,15 @@ router.post("/type-d", (req, res) => {
         .then(data => res.status(data.meta.code).json(data))
         .catch(err => res.status(err.meta.code).json(err));
 });
+
+/////////////////////////////////////// SAMPLE SUCCESSFUL RESPONSE /////////////////////////////////////////////////////////////
+
+// {
+//     "meta": {
+//         "success": true,
+//         "message": "Added the Type A data successfully!",
+//         "code": 200
+//     }
+// }
 
 module.exports = router;
